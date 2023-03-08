@@ -1,0 +1,20 @@
+Um processo tem uma heap e stack
+
+Para criar filhos(novos processos) usamos o comando fork
+Os dados do pai são copiados para o filho (variáveis, fd, ...)
+
+pid_t fork(void); (pid_t é como um inteiro)
+
+Tudo o que é executado a partir do fork é executado tanto pelo pai como pelo filho
+
+Se o valor do fork for 0 estamos perante o código do filho
+Se for >0 temos o código do pai e o pid do filho
+
+Quando o processo do pai termina antes do do filho o filho fica orfão(pid=1)
+Quando o processo do filho termina antes do do pai o filho fica zombie(pid=pid_parent)
+
+pid_t wait(int *status); 
+Bloqueia a execução do pai até um processo filho terminar
+O wait devolve o valor do filho que terminou
+
+255 é o -1, só conseguimos representar 254 valores
