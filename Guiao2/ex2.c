@@ -2,7 +2,7 @@
 #include <sys/wait.h> /* chamadas wait*() e macros relacionadas */
 #include <stdio.h>
 
-int main(int argc, int **argv) {
+int main(int argc, char **argv) {
     
     pid_t pid, ppid;
     if ((pid = fork()) == 0) { // fork retorna 0 ao processo-filho e o PID do filho ao processo-pai

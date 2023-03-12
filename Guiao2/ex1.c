@@ -2,7 +2,7 @@
 #include <sys/wait.h> /* chamadas wait*() e macros relacionadas */
 #include <stdio.h>
 
-int main(int argc, int **argv) {
+int main(int argc, char **argv) {
     
     pid_t pid, ppid;
     pid = getpid();

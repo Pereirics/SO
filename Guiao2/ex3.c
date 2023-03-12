@@ -2,7 +2,7 @@
 #include <sys/wait.h> /* chamadas wait*() e macros relacionadas */
 #include <stdio.h>
 
-int main(int argc, int **argv) {
+int main(int argc, char **argv) {
     
     int i, status, pid;
 
@@ -19,5 +19,5 @@ int main(int argc, int **argv) {
                 printf("Filho return value %d\n\n", WEXITSTATUS(status));
         }
     }        
-    return 0;
+    return 0;                                              
 }
