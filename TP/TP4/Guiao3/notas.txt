@@ -1,0 +1,14 @@
+Usar processos para mandar executar outros programas
+Exec() é o comando que vai fazer isso, as instruções do programa que estamos a usar vão ser substituídas pelas instruções do comando pedido a executar pelo exec
+Os descritores mantém-se abertos
+
+Podemos usar o exec() num fork, no filho é executado esse comando, o pai espera pelo resultado e depois o pai continua a executar
+
+int execl(path, arg0(nome do comando), ...(restantes argumentos), NULL)
+
+Apenas retorna valor em caso de erro 
+
+execlp não precisamos de passar o caminho, só o nome. Ele vai procurar nas pastas pelo comando 
+
+execv recebe os argumentos como um array
+execvp tem a mesma diferença de execl para execlp 

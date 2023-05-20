@@ -1,0 +1,2 @@
+<limits.h>
+printf("%d", PIPE_BUF);

@@ -15,7 +15,7 @@ int main(int argc, char** argv) {
         flag = 1;
     }
     
-    if (!flag && (fd2 = open(argv[2], O_WRONLY|O_CREAT, 0600)) == -1) {
+    if (!flag && (fd2 = open(argv[2], O_TRUNC | O_WRONLY|O_CREAT, 0600)) == -1) {
         perror("open output file");
         flag = 1;
         close(fd1);

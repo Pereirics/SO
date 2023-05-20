@@ -27,17 +27,17 @@ ssize_t readln(int fd, char* line, size_t size) {
     int line_counter = 0;
     char buffer[MAX_BUFFER];
     int bytes_read = 0;
-    int new_line = 1;
+    int new_line = 1, cont = 1;
 
     while ((bytes_read = readln(0, buffer, MAX_BUFFER)) > 0) {
-        char line_number[cont] = "";
+        char line_number[cont];
         snprintf(line_number, cont, "%d:", line_counter);
         write(1, line_number, sizeof(line_number));
         line_counter++;
         write(1, buffer, bytes_read);
         
-        if () new_line = 1;
-        else new_line = 0;    
+        //if () new_line = 1;
+        //else new_line = 0;    
     }
 
     return 0;

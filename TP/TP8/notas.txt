@@ -1,0 +1,1 @@
+dup faz cópia de um descritor
